@@ -1,6 +1,7 @@
 import Sidebar from "../components/Dashboard/Sidebar/Sidebar";
 import Topbar from "../components/Dashboard/Topbar/Topbar";
 import StatsCards from "../components/Dashboard/Cards/StatsCards";
+import ProgressWidgets from "../components/Dashboard/Widgets/ProgressWidgets";
 
 function Dashboard() {
   return (
@@ -45,6 +46,8 @@ function Dashboard() {
           </p>
 
           <StatsCards />
+
+          <ProgressWidgets />
         </div>
       </div>
     </div>

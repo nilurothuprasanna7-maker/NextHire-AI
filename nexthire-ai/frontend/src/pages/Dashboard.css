@@ -1,0 +1,14 @@
+.dashboard-page {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 25px;
+  padding: 30px;
+}
+
+@media (max-width:900px){
+
+.dashboard-page{
+grid-template-columns:1fr;
+}
+
+}

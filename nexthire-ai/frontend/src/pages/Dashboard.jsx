@@ -1,34 +1,20 @@
 import DashboardLayout from "../layouts/DashboardLayout";
-import StatsCards from "../components/Dashboard/Cards/StatsCards";
-import ProgressWidgets from "../components/Dashboard/Widgets/ProgressWidgets";
-import RecentActivity from "../components/Dashboard/Widgets/RecentActivity";
+
+import ProfileCard from "../components/Profile/ProfileCard";
+import ResumeProgress from "../components/Profile/ResumeProgress";
+
+import "./Dashboard.css";
 
 function Dashboard() {
   return (
     <DashboardLayout>
-      <h1
-        style={{
-          color: "white",
-          marginBottom: "10px",
-        }}
-      >
-        Welcome Back 👋
-      </h1>
+      <div className="dashboard-page">
 
-      <p
-        style={{
-          color: "#9aa6c5",
-          marginBottom: "35px",
-        }}
-      >
-        Here's an overview of your placement preparation.
-      </p>
+        <ProfileCard />
 
-      <StatsCards />
+        <ResumeProgress />
 
-      <ProgressWidgets />
-
-      <RecentActivity />
+      </div>
     </DashboardLayout>
   );
 }

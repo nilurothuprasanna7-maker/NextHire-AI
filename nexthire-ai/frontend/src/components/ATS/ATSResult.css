@@ -1,0 +1,50 @@
+.ats-result {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 30px;
+  border-radius: 20px;
+  color: white;
+}
+
+.score-circle {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  margin: 30px auto;
+  background: linear-gradient(135deg, #7c3aed, #06b6d4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.score-circle h1 {
+  margin: 0;
+  font-size: 52px;
+}
+
+.score-circle span {
+  font-size: 20px;
+}
+
+.result-section {
+  margin-top: 30px;
+}
+
+.result-section h3 {
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.result-section ul {
+  margin: 0;
+  padding-left: 22px;
+}
+
+.result-section li {
+  color: #cbd5e1;
+  margin-bottom: 10px;
+  font-size: 16px;
+}

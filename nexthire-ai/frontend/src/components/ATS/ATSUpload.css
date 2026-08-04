@@ -1,0 +1,38 @@
+.ats-upload{
+background:#ffffff;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+text-align:center;
+margin-bottom:30px;
+}
+
+.ats-upload h2{
+margin-bottom:10px;
+color:#111827;
+}
+
+.ats-upload p{
+color:#6b7280;
+margin-bottom:20px;
+}
+
+.upload-box{
+display:inline-block;
+padding:15px 30px;
+background:#7c3aed;
+color:white;
+border-radius:12px;
+cursor:pointer;
+font-weight:600;
+}
+
+.upload-box:hover{
+background:#6d28d9;
+}
+
+.file-name{
+margin-top:20px;
+font-weight:bold;
+color:#16a34a;
+}

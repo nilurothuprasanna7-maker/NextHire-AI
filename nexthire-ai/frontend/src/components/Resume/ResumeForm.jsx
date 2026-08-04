@@ -1,3 +1,6 @@
+import jsPDF from "jspdf";
+import html2canvas from "html2canvas";
+
 import PersonalInfo from "./PersonalInfo";
 import EducationForm from "./EducationForm";
 import ExperienceForm from "./ExperienceForm";
@@ -21,6 +24,7 @@ function ResumeForm({
   photo,
   setPhoto,
 }) {
+
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -28,12 +32,40 @@ function ResumeForm({
     });
   };
 
-  const printResume = () => {
-    window.print();
+  const downloadResume = async () => {
+    const resume = document.getElementById("resume-preview");
+
+    if (!resume) return;
+
+    const canvas = await html2canvas(resume, {
+      scale: 2,
+      useCORS: true,
+    });
+
+    const imgData = canvas.toDataURL("image/png");
+
+    const pdf = new jsPDF("p", "mm", "a4");
+
+    const pdfWidth = pdf.internal.pageSize.getWidth();
+
+    const pdfHeight =
+      (canvas.height * pdfWidth) / canvas.width;
+
+    pdf.addImage(
+      imgData,
+      "PNG",
+      0,
+      0,
+      pdfWidth,
+      pdfHeight
+    );
+
+    pdf.save("NextHireAI_Resume.pdf");
   };
 
   return (
     <div className="resume-form">
+
       <h2>AI Resume Builder</h2>
 
       <PhotoUpload
@@ -78,7 +110,7 @@ function ResumeForm({
           name="skills"
           value={formData.skills}
           onChange={handleChange}
-          placeholder="React, Java, Python..."
+          placeholder="React, Java, Python, SQL..."
         />
       </div>
 
@@ -101,17 +133,20 @@ function ResumeForm({
       />
 
       <div className="resume-buttons">
+
         <button className="save-btn">
           Save Resume
         </button>
 
         <button
           className="download-btn"
-          onClick={printResume}
+          onClick={downloadResume}
         >
-          Print Resume
+          Download PDF
         </button>
+
       </div>
+
     </div>
   );
 }

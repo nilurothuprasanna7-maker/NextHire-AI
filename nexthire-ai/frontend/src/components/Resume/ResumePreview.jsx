@@ -12,30 +12,46 @@ function ResumePreview({
 
       <div className="resume-header">
 
-        {photo && (
+        {photo ? (
           <img
             src={photo}
             alt="Profile"
             className="resume-photo"
           />
+        ) : (
+          <div className="resume-photo-placeholder">
+            Photo
+          </div>
         )}
 
-        <h1>{formData.fullName || "Your Name"}</h1>
+        <div>
+          <h1>{formData.fullName || "Your Name"}</h1>
 
-        <p>{formData.email}</p>
+          <p>{formData.email}</p>
 
-        <p>{formData.phone}</p>
+          <p>{formData.phone}</p>
+
+          <p>{formData.college}</p>
+
+          <p>{formData.degree}</p>
+        </div>
 
       </div>
 
       <hr />
 
       <section>
+        <h2>Skills</h2>
+
+        <p>{formData.skills}</p>
+      </section>
+
+      <section>
 
         <h2>Education</h2>
 
         {education.map((item, index) => (
-          <div key={index} className="resume-item">
+          <div key={index} className="resume-block">
 
             <h3>{item.degree}</h3>
 
@@ -53,7 +69,7 @@ function ResumePreview({
         <h2>Experience</h2>
 
         {experience.map((item, index) => (
-          <div key={index} className="resume-item">
+          <div key={index} className="resume-block">
 
             <h3>{item.role}</h3>
 
@@ -75,15 +91,13 @@ function ResumePreview({
         <h2>Projects</h2>
 
         {projects.map((item, index) => (
-          <div key={index} className="resume-item">
+          <div key={index} className="resume-block">
 
             <h3>{item.name}</h3>
 
             <p>{item.description}</p>
 
-            <p>
-              <strong>Tech:</strong> {item.tech}
-            </p>
+            <p><strong>Tech:</strong> {item.tech}</p>
 
             <p>{item.github}</p>
 
@@ -91,14 +105,6 @@ function ResumePreview({
 
           </div>
         ))}
-
-      </section>
-
-      <section>
-
-        <h2>Skills</h2>
-
-        <p>{formData.skills}</p>
 
       </section>
 

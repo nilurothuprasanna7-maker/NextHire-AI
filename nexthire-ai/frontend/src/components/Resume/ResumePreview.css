@@ -1,94 +1,100 @@
 .resume-preview {
-  flex: 1;
-  background: #e5e7eb;
-  padding: 30px;
-  display: flex;
-  justify-content: center;
-  overflow-y: auto;
-}
-
-.resume-paper {
-  width: 794px;
+  width: 100%;
+  max-width: 800px;
   min-height: 1123px;
-  background: white;
+  background: #ffffff;
+  padding: 40px;
+  margin: auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
   color: #222;
-  padding: 50px;
-  border-radius: 8px;
-  box-shadow: 0 10px 30px rgba(0,0,0,.2);
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .resume-header {
-  text-align: center;
-  border-bottom: 2px solid #6d5dfc;
-  padding-bottom: 20px;
-  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 25px;
+}
+
+.resume-photo {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #7c3aed;
+}
+
+.resume-photo-placeholder {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px dashed #bbb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #777;
 }
 
 .resume-header h1 {
-  margin: 0;
-  font-size: 34px;
+  font-size: 32px;
+  margin-bottom: 10px;
   color: #111827;
 }
 
 .resume-header p {
   margin: 5px 0;
   color: #555;
-  font-size: 15px;
 }
 
-.resume-section {
+.resume-preview hr {
+  margin: 25px 0;
+}
+
+.resume-preview section {
   margin-bottom: 30px;
 }
 
-.resume-section h2 {
-  color: #6d5dfc;
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 8px;
+.resume-preview h2 {
+  color: #7c3aed;
+  border-bottom: 2px solid #7c3aed;
+  padding-bottom: 6px;
   margin-bottom: 15px;
-  font-size: 22px;
 }
 
-.resume-item {
+.resume-block {
   margin-bottom: 18px;
 }
 
-.resume-item h3 {
-  margin: 0;
+.resume-block h3 {
   color: #111827;
-  font-size: 18px;
+  margin-bottom: 5px;
 }
 
-.resume-item p {
-  margin: 5px 0;
+.resume-block p {
+  margin: 4px 0;
   color: #444;
 }
 
-.resume-item span {
+.resume-block span {
   color: #777;
   font-size: 14px;
 }
 
-.skills-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+@media screen and (max-width:768px){
+
+.resume-preview{
+padding:20px;
 }
 
-.skill-chip {
-  background: #6d5dfc;
-  color: white;
-  padding: 8px 15px;
-  border-radius: 20px;
-  font-size: 14px;
+.resume-header{
+flex-direction:column;
+text-align:center;
 }
 
-@media (max-width: 992px) {
-  .resume-paper {
-    width: 100%;
-    padding: 25px;
-  }
+.resume-header h1{
+font-size:26px;
+}
 
-  .resume-preview {
-    padding: 15px;
-  }
 }

@@ -5,6 +5,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
 import Resume from "./pages/Resume";
+import ATS from "./pages/ATS";
 
 import "./App.css";
 
@@ -23,6 +24,9 @@ function App() {
 
       {/* Resume Builder */}
       <Route path="/resume" element={<Resume />} />
+
+      {/* ATS Scanner */}
+      <Route path="/ats" element={<ATS />} />
     </Routes>
   );
 }

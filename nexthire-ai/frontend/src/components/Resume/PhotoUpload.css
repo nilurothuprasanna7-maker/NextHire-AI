@@ -1,0 +1,18 @@
+.photo-upload {
+  margin: 20px 0;
+}
+
+.upload-btn {
+  display: inline-block;
+  padding: 12px 20px;
+  background: linear-gradient(90deg,#6d5dfc,#00d4ff);
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.upload-btn:hover {
+  transform: translateY(-2px);
+}

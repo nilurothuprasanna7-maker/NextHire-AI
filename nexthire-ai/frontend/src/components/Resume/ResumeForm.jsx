@@ -2,6 +2,7 @@ import PersonalInfo from "./PersonalInfo";
 import EducationForm from "./EducationForm";
 import ExperienceForm from "./ExperienceForm";
 import ProjectsForm from "./ProjectsForm";
+import PhotoUpload from "./PhotoUpload";
 
 import "./ResumeForm.css";
 
@@ -17,6 +18,8 @@ function ResumeForm({
   projects,
   handleProjectChange,
   addProject,
+  photo,
+  setPhoto,
 }) {
   const handleChange = (e) => {
     setFormData({
@@ -25,9 +28,18 @@ function ResumeForm({
     });
   };
 
+  const printResume = () => {
+    window.print();
+  };
+
   return (
     <div className="resume-form">
-      <h2>Resume Builder</h2>
+      <h2>AI Resume Builder</h2>
+
+      <PhotoUpload
+        photo={photo}
+        setPhoto={setPhoto}
+      />
 
       <PersonalInfo
         formData={formData}
@@ -88,9 +100,18 @@ function ResumeForm({
         addProject={addProject}
       />
 
-      <button className="save-btn">
-        Save Resume
-      </button>
+      <div className="resume-buttons">
+        <button className="save-btn">
+          Save Resume
+        </button>
+
+        <button
+          className="download-btn"
+          onClick={printResume}
+        >
+          Print Resume
+        </button>
+      </div>
     </div>
   );
 }

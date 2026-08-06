@@ -1,0 +1,54 @@
+.interview-question{
+max-width:900px;
+margin:40px auto;
+padding:35px;
+background:rgba(255,255,255,.06);
+backdrop-filter:blur(12px);
+border:1px solid rgba(255,255,255,.08);
+border-radius:20px;
+color:white;
+}
+
+.interview-question h2{
+color:#7c3aed;
+margin-bottom:20px;
+}
+
+.timer{
+font-size:20px;
+font-weight:bold;
+margin-bottom:20px;
+color:#06b6d4;
+}
+
+.interview-question h1{
+margin-bottom:25px;
+font-size:30px;
+}
+
+.interview-question textarea{
+width:100%;
+padding:18px;
+border:none;
+border-radius:12px;
+background:#1e293b;
+color:white;
+resize:none;
+font-size:16px;
+margin-bottom:25px;
+}
+
+.interview-question button{
+padding:14px 28px;
+border:none;
+background:#7c3aed;
+color:white;
+border-radius:12px;
+cursor:pointer;
+font-size:16px;
+font-weight:600;
+}
+
+.interview-question button:hover{
+background:#6d28d9;
+}

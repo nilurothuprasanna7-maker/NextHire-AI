@@ -1,0 +1,53 @@
+.coding-editor{
+background:rgba(255,255,255,.06);
+border:1px solid rgba(255,255,255,.08);
+backdrop-filter:blur(12px);
+padding:25px;
+border-radius:20px;
+margin-bottom:25px;
+}
+
+.editor-top{
+margin-bottom:20px;
+}
+
+.editor-top select{
+padding:10px 16px;
+background:#1e293b;
+color:white;
+border:none;
+border-radius:8px;
+}
+
+.coding-editor textarea{
+width:100%;
+height:350px;
+background:#0f172a;
+color:#fff;
+border:none;
+border-radius:12px;
+padding:20px;
+font-size:15px;
+font-family:Consolas, monospace;
+resize:none;
+}
+
+.editor-buttons{
+margin-top:20px;
+display:flex;
+gap:15px;
+}
+
+.editor-buttons button{
+padding:12px 22px;
+background:#7c3aed;
+border:none;
+border-radius:10px;
+color:white;
+cursor:pointer;
+font-weight:600;
+}
+
+.editor-buttons button:hover{
+background:#6d28d9;
+}

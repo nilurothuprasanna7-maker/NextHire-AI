@@ -1,5 +1,6 @@
 import jsPDF from "jspdf";
 import html2canvas from "html2canvas";
+import axios from "axios";
 
 import PersonalInfo from "./PersonalInfo";
 import EducationForm from "./EducationForm";
@@ -32,6 +33,48 @@ function ResumeForm({
     });
   };
 
+  // Save Resume to MongoDB
+  const saveResume = async () => {
+    try {
+      const token = localStorage.getItem("token");
+
+      if (!token) {
+        alert("Please login first.");
+        return;
+      }
+
+      const payload = JSON.parse(atob(token.split(".")[1]));
+      const userId = payload.id;
+
+      const response = await axios.post(
+        "http://localhost:5000/api/resume/save",
+        {
+          userId,
+          fullName: formData.fullName,
+          email: formData.email,
+          phone: formData.phone,
+          college: formData.college,
+          degree: formData.degree,
+          skills: formData.skills,
+          education,
+          experience,
+          projects,
+        }
+      );
+
+      alert(response.data.message);
+
+    } catch (error) {
+      console.error(error);
+
+      alert(
+        error.response?.data?.message ||
+        "Failed to Save Resume"
+      );
+    }
+  };
+
+  // Download Resume PDF
   const downloadResume = async () => {
     const resume = document.getElementById("resume-preview");
 
@@ -134,7 +177,10 @@ function ResumeForm({
 
       <div className="resume-buttons">
 
-        <button className="save-btn">
+        <button
+          className="save-btn"
+          onClick={saveResume}
+        >
           Save Resume
         </button>
 

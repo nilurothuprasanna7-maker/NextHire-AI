@@ -1,0 +1,54 @@
+.interview-result{
+max-width:900px;
+margin:40px auto;
+padding:40px;
+background:rgba(255,255,255,.06);
+backdrop-filter:blur(12px);
+border:1px solid rgba(255,255,255,.08);
+border-radius:20px;
+text-align:center;
+color:white;
+}
+
+.overall-score{
+margin:30px 0;
+}
+
+.overall-score span{
+font-size:60px;
+font-weight:bold;
+color:#7c3aed;
+}
+
+.result-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+margin-top:30px;
+}
+
+.result-card{
+background:rgba(255,255,255,.05);
+padding:20px;
+border-radius:15px;
+}
+
+.result-card h3{
+margin-bottom:10px;
+}
+
+.interview-result button{
+margin-top:35px;
+padding:14px 30px;
+border:none;
+background:#7c3aed;
+color:white;
+border-radius:12px;
+cursor:pointer;
+font-size:16px;
+font-weight:600;
+}
+
+.interview-result button:hover{
+background:#6d28d9;
+}

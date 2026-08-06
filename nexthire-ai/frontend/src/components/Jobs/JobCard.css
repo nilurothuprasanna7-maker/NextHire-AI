@@ -1,0 +1,33 @@
+.job-card{
+background:rgba(255,255,255,.06);
+border:1px solid rgba(255,255,255,.08);
+backdrop-filter:blur(12px);
+padding:25px;
+border-radius:20px;
+color:white;
+transition:.3s;
+}
+
+.job-card:hover{
+transform:translateY(-6px);
+box-shadow:0 15px 35px rgba(124,58,237,.25);
+}
+
+.job-card h2{
+margin-bottom:10px;
+}
+
+.job-card p{
+margin:8px 0;
+color:#cbd5e1;
+}
+
+.job-card button{
+margin-top:18px;
+padding:12px 22px;
+background:#7c3aed;
+border:none;
+border-radius:10px;
+color:white;
+cursor:pointer;
+}

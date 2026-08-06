@@ -7,6 +7,8 @@ import ResumePreview from "../components/Resume/ResumePreview";
 import "./Resume.css";
 
 function Resume() {
+  const [photo, setPhoto] = useState(null);
+
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -117,6 +119,8 @@ function Resume() {
           projects={projects}
           handleProjectChange={handleProjectChange}
           addProject={addProject}
+          photo={photo}
+          setPhoto={setPhoto}
         />
 
         <ResumePreview
@@ -124,6 +128,7 @@ function Resume() {
           education={education}
           experience={experience}
           projects={projects}
+          photo={photo}
         />
       </div>
     </DashboardLayout>

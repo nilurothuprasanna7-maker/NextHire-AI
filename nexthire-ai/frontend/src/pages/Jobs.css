@@ -1,0 +1,16 @@
+.jobs-page{
+min-height:100vh;
+padding:30px;
+background:#070b1d;
+}
+
+.jobs-page h1{
+color:white;
+margin-bottom:25px;
+}
+
+.jobs-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}

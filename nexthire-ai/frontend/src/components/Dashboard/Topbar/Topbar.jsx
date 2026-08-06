@@ -1,12 +1,22 @@
-import { FaSearch, FaBell, FaMoon } from "react-icons/fa";
+import { FaSearch, FaBell, FaMoon, FaSignOutAlt } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 import "./Topbar.css";
 
 function Topbar() {
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    alert("Logged out successfully!");
+    navigate("/login");
+  };
+
   return (
     <header className="topbar">
 
       <div className="search-box">
         <FaSearch className="search-icon" />
+
         <input
           type="text"
           placeholder="Search..."
@@ -36,6 +46,14 @@ function Topbar() {
           </div>
 
         </div>
+
+        <button
+          className="icon-btn"
+          onClick={handleLogout}
+          title="Logout"
+        >
+          <FaSignOutAlt />
+        </button>
 
       </div>
 

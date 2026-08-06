@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
+import axios from "axios";
 import {
   FaEye,
   FaEyeSlash,
@@ -11,7 +12,42 @@ import {
 import "./LoginForm.css";
 
 function LoginForm() {
+  const navigate = useNavigate();
+
   const [showPassword, setShowPassword] = useState(false);
+
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+
+    try {
+      const res = await axios.post(
+        "http://localhost:5000/api/auth/login",
+        formData
+      );
+
+      localStorage.setItem("token", res.data.token);
+
+      alert(res.data.message);
+
+      navigate("/dashboard");
+    } catch (error) {
+      alert(
+        error.response?.data?.message || "Login Failed"
+      );
+    }
+  };
 
   return (
     <motion.div
@@ -22,58 +58,53 @@ function LoginForm() {
     >
       <h1>Welcome Back 👋</h1>
 
-      <p>
-        Continue your placement journey with NextHire AI
-      </p>
+      <p>Continue your placement journey with NextHire AI</p>
 
-      <form>
+      <form onSubmit={handleLogin}>
 
         <div className="input-group">
           <label>Email</label>
 
           <input
             type="email"
+            name="email"
             placeholder="Enter your email"
+            value={formData.email}
+            onChange={handleChange}
+            required
           />
         </div>
 
         <div className="input-group">
-
           <label>Password</label>
 
           <div className="password-box">
 
             <input
               type={showPassword ? "text" : "password"}
+              name="password"
               placeholder="Enter your password"
+              value={formData.password}
+              onChange={handleChange}
+              required
             />
 
             <button
               type="button"
               className="eye-btn"
-              onClick={() =>
-                setShowPassword(!showPassword)
-              }
+              onClick={() => setShowPassword(!showPassword)}
             >
-              {showPassword ? (
-                <FaEyeSlash />
-              ) : (
-                <FaEye />
-              )}
+              {showPassword ? <FaEyeSlash /> : <FaEye />}
             </button>
 
           </div>
-
         </div>
 
         <div className="login-options">
 
           <label>
-
             <input type="checkbox" />
-
             Remember me
-
           </label>
 
           <Link to="#">
@@ -106,13 +137,11 @@ function LoginForm() {
       </button>
 
       <div className="register-link">
-
         Don't have an account?
 
         <Link to="/register">
           Register
         </Link>
-
       </div>
 
     </motion.div>

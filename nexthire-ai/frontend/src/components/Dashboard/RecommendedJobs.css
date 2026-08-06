@@ -1,0 +1,29 @@
+.recommended-jobs{
+background:rgba(255,255,255,.06);
+padding:25px;
+border-radius:20px;
+border:1px solid rgba(255,255,255,.08);
+color:white;
+}
+
+.job-box{
+padding:15px;
+margin-top:15px;
+background:rgba(255,255,255,.05);
+border-radius:12px;
+}
+
+.job-box h3{
+margin-bottom:8px;
+}
+
+.job-box p{
+color:#cbd5e1;
+}
+
+.job-box span{
+display:inline-block;
+margin-top:8px;
+color:#22c55e;
+font-weight:bold;
+}

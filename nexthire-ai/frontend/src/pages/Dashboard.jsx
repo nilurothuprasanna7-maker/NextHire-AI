@@ -1,55 +1,43 @@
 import DashboardLayout from "../layouts/DashboardLayout";
-import ProfileCard from "../components/Profile/ProfileCard";
-import MentorCard from "../components/Dashboard/MentorCard";
-import ProgressCard from "../components/Dashboard/ProgressCard";
-import { dashboardStats } from "../components/Dashboard/dashboardData";
+
+import WelcomeBanner from "../components/Dashboard/WelcomeBanner";
+import ProgressChart from "../components/Dashboard/ProgressChart";
+import NovaWidget from "../components/Dashboard/NovaWidget";
+import DailyGoals from "../components/Dashboard/DailyGoals";
+import QuickActions from "../components/Dashboard/QuickActions";
+import RecommendedJobs from "../components/Dashboard/RecommendedJobs";
+import PlacementNews from "../components/Dashboard/PlacementNews";
 
 import "./Dashboard.css";
 
 function Dashboard() {
   return (
     <DashboardLayout>
-      <div className="dashboard">
+      <div className="dashboard-page">
 
-        <ProfileCard />
+        <WelcomeBanner />
 
-        <div className="dashboard-right">
+        <div className="dashboard-grid">
 
-          <h1>Welcome Back 👋</h1>
+          <div className="left-section">
 
-          <p>Track your placement preparation with NextHire AI.</p>
+            <ProgressChart />
 
-          <div className="stats-grid">
+            <DailyGoals />
 
-            {dashboardStats.map((item) => {
-              const Icon = item.icon;
-
-              return (
-                <div className="dashboard-card" key={item.id}>
-
-                  <div
-                    className="dashboard-card-icon"
-                    style={{ background: item.color }}
-                  >
-                    <Icon />
-                  </div>
-
-                  <h3>{item.title}</h3>
-
-                  <h2>{item.value}</h2>
-
-                </div>
-              );
-            })}
+            <PlacementNews />
 
           </div>
 
-          <ProgressCard
-            title="Overall Placement Preparation"
-            progress={79}
-          />
+          <div className="right-section">
 
-          <MentorCard />
+            <NovaWidget />
+
+            <QuickActions />
+
+            <RecommendedJobs />
+
+          </div>
 
         </div>
 

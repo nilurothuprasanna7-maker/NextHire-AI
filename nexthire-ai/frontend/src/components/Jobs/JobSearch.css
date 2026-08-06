@@ -1,0 +1,18 @@
+.job-search{
+margin-bottom:30px;
+}
+
+.job-search input{
+width:100%;
+padding:16px;
+background:#1e293b;
+color:white;
+border:none;
+border-radius:12px;
+font-size:16px;
+outline:none;
+}
+
+.job-search input::placeholder{
+color:#94a3b8;
+}

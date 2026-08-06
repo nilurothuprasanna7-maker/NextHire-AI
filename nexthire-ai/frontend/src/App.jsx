@@ -6,27 +6,97 @@ import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
 import Resume from "./pages/Resume";
 import ATS from "./pages/ATS";
+import Interview from "./pages/Interview";
+import Coding from "./pages/Coding";
+import Aptitude from "./pages/Aptitude";
+import Jobs from "./pages/Jobs";
+import Profile from "./pages/Profile";
+
+import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
 
 import "./App.css";
 
 function App() {
   return (
     <Routes>
-      {/* Landing Page */}
+
       <Route path="/" element={<Home />} />
 
-      {/* Authentication */}
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
 
-      {/* Dashboard */}
-      <Route path="/dashboard" element={<Dashboard />} />
+      <Route
+        path="/dashboard"
+        element={
+          <ProtectedRoute>
+            <Dashboard />
+          </ProtectedRoute>
+        }
+      />
 
-      {/* Resume Builder */}
-      <Route path="/resume" element={<Resume />} />
+      <Route
+        path="/resume"
+        element={
+          <ProtectedRoute>
+            <Resume />
+          </ProtectedRoute>
+        }
+      />
 
-      {/* ATS Scanner */}
-      <Route path="/ats" element={<ATS />} />
+      <Route
+        path="/ats"
+        element={
+          <ProtectedRoute>
+            <ATS />
+          </ProtectedRoute>
+        }
+      />
+
+      <Route
+        path="/interview"
+        element={
+          <ProtectedRoute>
+            <Interview />
+          </ProtectedRoute>
+        }
+      />
+
+      <Route
+        path="/coding"
+        element={
+          <ProtectedRoute>
+            <Coding />
+          </ProtectedRoute>
+        }
+      />
+
+      <Route
+        path="/aptitude"
+        element={
+          <ProtectedRoute>
+            <Aptitude />
+          </ProtectedRoute>
+        }
+      />
+
+      <Route
+        path="/jobs"
+        element={
+          <ProtectedRoute>
+            <Jobs />
+          </ProtectedRoute>
+        }
+      />
+
+      <Route
+        path="/profile"
+        element={
+          <ProtectedRoute>
+            <Profile />
+          </ProtectedRoute>
+        }
+      />
+
     </Routes>
   );
 }

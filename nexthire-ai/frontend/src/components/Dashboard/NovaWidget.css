@@ -1,0 +1,34 @@
+.nova-widget{
+background:linear-gradient(135deg,#7c3aed,#4f46e5);
+padding:25px;
+border-radius:20px;
+color:white;
+margin-top:30px;
+}
+
+.nova-widget h2{
+margin-bottom:15px;
+}
+
+.nova-widget p{
+margin-bottom:15px;
+}
+
+.nova-widget ul{
+padding-left:20px;
+margin-bottom:20px;
+}
+
+.nova-widget li{
+margin-bottom:10px;
+}
+
+.nova-widget button{
+padding:12px 24px;
+border:none;
+border-radius:10px;
+background:white;
+color:#4f46e5;
+font-weight:bold;
+cursor:pointer;
+}

@@ -1,0 +1,29 @@
+.quick-actions{
+background:rgba(255,255,255,.06);
+padding:25px;
+border-radius:20px;
+border:1px solid rgba(255,255,255,.08);
+color:white;
+}
+
+.action-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+margin-top:20px;
+}
+
+.action-grid a{
+background:#7c3aed;
+padding:14px;
+text-align:center;
+border-radius:10px;
+text-decoration:none;
+color:white;
+font-weight:bold;
+transition:.3s;
+}
+
+.action-grid a:hover{
+background:#6d28d9;
+}

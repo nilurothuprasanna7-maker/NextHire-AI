@@ -3,16 +3,16 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+
 import Dashboard from "./pages/Dashboard";
 import Resume from "./pages/Resume";
 import ATS from "./pages/ATS";
-import Interview from "./pages/Interview";
 import Coding from "./pages/Coding";
 import Aptitude from "./pages/Aptitude";
+import Interview from "./pages/Interview";
 import Jobs from "./pages/Jobs";
 import Profile from "./pages/Profile";
-
-import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
+import Settings from "./pages/Settings";
 
 import "./App.css";
 
@@ -20,80 +20,110 @@ function App() {
   return (
     <Routes>
 
+      {/* ========================= */}
+      {/* PUBLIC PAGES */}
+      {/* ========================= */}
+
       <Route path="/" element={<Home />} />
 
       <Route path="/login" element={<Login />} />
+
       <Route path="/register" element={<Register />} />
+
+
+      {/* ========================= */}
+      {/* DASHBOARD */}
+      {/* ========================= */}
 
       <Route
         path="/dashboard"
-        element={
-          <ProtectedRoute>
-            <Dashboard />
-          </ProtectedRoute>
-        }
+        element={<Dashboard />}
       />
+
+
+      {/* ========================= */}
+      {/* PLACEMENT FEATURES */}
+      {/* ========================= */}
 
       <Route
         path="/resume"
-        element={
-          <ProtectedRoute>
-            <Resume />
-          </ProtectedRoute>
-        }
+        element={<Resume />}
       />
 
       <Route
         path="/ats"
-        element={
-          <ProtectedRoute>
-            <ATS />
-          </ProtectedRoute>
-        }
-      />
-
-      <Route
-        path="/interview"
-        element={
-          <ProtectedRoute>
-            <Interview />
-          </ProtectedRoute>
-        }
+        element={<ATS />}
       />
 
       <Route
         path="/coding"
-        element={
-          <ProtectedRoute>
-            <Coding />
-          </ProtectedRoute>
-        }
+        element={<Coding />}
       />
 
       <Route
         path="/aptitude"
-        element={
-          <ProtectedRoute>
-            <Aptitude />
-          </ProtectedRoute>
-        }
+        element={<Aptitude />}
+      />
+
+      <Route
+        path="/interview"
+        element={<Interview />}
       />
 
       <Route
         path="/jobs"
-        element={
-          <ProtectedRoute>
-            <Jobs />
-          </ProtectedRoute>
-        }
+        element={<Jobs />}
       />
+
+
+      {/* ========================= */}
+      {/* USER */}
+      {/* ========================= */}
 
       <Route
         path="/profile"
+        element={<Profile />}
+      />
+
+      <Route
+        path="/settings"
+        element={<Settings />}
+      />
+
+
+      {/* ========================= */}
+      {/* 404 PAGE */}
+      {/* ========================= */}
+
+      <Route
+        path="*"
         element={
-          <ProtectedRoute>
-            <Profile />
-          </ProtectedRoute>
+          <div
+            style={{
+              minHeight: "100vh",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              background: "#050816",
+              color: "#ffffff",
+              textAlign: "center",
+              padding: "20px",
+            }}
+          >
+            <div>
+              <h1 style={{ fontSize: "60px", marginBottom: "10px" }}>
+                404
+              </h1>
+
+              <h2>
+                Page Not Found
+              </h2>
+
+              <p style={{ color: "#aeb7d0" }}>
+                The page you're looking for doesn't exist.
+              </p>
+            </div>
+          </div>
         }
       />
 

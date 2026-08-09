@@ -1,0 +1,51 @@
+.ats-page{
+    min-height:100vh;
+    background:linear-gradient(135deg,#050816,#0f172a,#111827);
+    padding:40px;
+    color:#ffffff;
+}
+
+.ats-page h1{
+    font-size:38px;
+    font-weight:700;
+    margin-bottom:10px;
+    color:#ffffff;
+}
+
+.ats-page p{
+    color:#cbd5e1;
+    font-size:16px;
+    margin-bottom:30px;
+}
+
+.ats-container{
+    max-width:1200px;
+    margin:0 auto;
+}
+
+.ats-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:30px;
+}
+
+@media(min-width:992px){
+    .ats-grid{
+        grid-template-columns:380px 1fr;
+    }
+}
+
+.ats-card{
+    background:#1e293b;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:20px;
+    padding:30px;
+    box-shadow:0 10px 30px rgba(0,0,0,.35);
+    transition:.3s;
+}
+
+.ats-card:hover{
+    transform:translateY(-6px);
+    border-color:#6d5dfc;
+    box-shadow:0 15px 40px rgba(109,93,252,.25);
+}

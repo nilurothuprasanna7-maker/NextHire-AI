@@ -1,0 +1,61 @@
+.interview-question{
+    width:800px;
+    margin:40px auto;
+    background:#fff;
+    padding:35px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,.12);
+}
+
+.question-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.question-header h2{
+    color:#6d5dfc;
+}
+
+.timer{
+    background:#6d5dfc;
+    color:white;
+    padding:8px 15px;
+    border-radius:20px;
+    font-weight:bold;
+}
+
+.question-count{
+    color:#777;
+    margin-bottom:15px;
+}
+
+.interview-question h1{
+    font-size:24px;
+    margin-bottom:20px;
+}
+
+.interview-question textarea{
+    width:100%;
+    padding:15px;
+    border-radius:10px;
+    border:1px solid #ccc;
+    resize:none;
+    margin-bottom:20px;
+    font-size:15px;
+}
+
+.interview-question button{
+    background:#6d5dfc;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.interview-question button:hover{
+    background:#5747e6;
+}

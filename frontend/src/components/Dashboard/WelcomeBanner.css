@@ -1,0 +1,41 @@
+.welcome-banner{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:30px;
+background:linear-gradient(135deg,#7c3aed,#4f46e5);
+border-radius:20px;
+color:white;
+margin-bottom:30px;
+}
+
+.welcome-banner h1{
+font-size:32px;
+margin-bottom:10px;
+}
+
+.welcome-banner p{
+font-size:16px;
+opacity:.9;
+}
+
+.readiness{
+text-align:center;
+}
+
+.readiness span{
+display:block;
+font-size:48px;
+font-weight:bold;
+margin-top:10px;
+}
+
+@media(max-width:768px){
+
+.welcome-banner{
+flex-direction:column;
+gap:20px;
+text-align:center;
+}
+
+}

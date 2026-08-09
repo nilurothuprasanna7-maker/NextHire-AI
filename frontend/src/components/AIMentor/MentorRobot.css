@@ -1,0 +1,110 @@
+.mentor-floating{
+    position:fixed;
+    right:25px;
+    bottom:25px;
+    width:80px;
+    height:80px;
+    border-radius:50%;
+    cursor:pointer;
+    z-index:9999;
+    animation:float 2s ease-in-out infinite;
+}
+
+.mentor-image{
+    width:100%;
+    height:100%;
+    border-radius:50%;
+    box-shadow:0 5px 20px rgba(0,0,0,.25);
+}
+
+.mentor-badge{
+    position:absolute;
+    top:-5px;
+    right:-5px;
+    background:red;
+    color:#6d5dfc;
+    width:25px;
+    height:25px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:12px;
+}
+
+@keyframes float{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-10px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
+
+.mentor-chat{
+    position:fixed;
+    right:25px;
+    bottom:120px;
+    width:360px;
+    background:linear-gradient();
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 35px rgba(0,0,0,.25);
+    z-index:9999;
+}
+
+.mentor-header{
+    background:#6d5dfc;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px;
+}
+
+.mentor-header button{
+    background:none;
+    border:none;
+    color:white;
+    font-size:20px;
+    cursor:pointer;
+}
+
+.mentor-body{
+    padding:20px;
+    min-height:250px;
+}
+
+.mentor-message{
+    background:black;
+    padding:15px;
+    border-radius:12px;
+    line-height:1.7;
+}
+
+.mentor-footer{
+    display:flex;
+    border-top:1px solid #ddd;
+}
+
+.mentor-footer input{
+    flex:1;
+    border:none;
+    padding:15px;
+    outline:none;
+}
+
+.mentor-footer button{
+    width:60px;
+    background:#6d5dfc;
+    color:white;
+    border:none;
+    cursor:pointer;
+}

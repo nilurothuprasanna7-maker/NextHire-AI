@@ -1,0 +1,79 @@
+.problem-card{
+    background:#2b2d31;
+    color:#ffffff;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,.25);
+    margin-bottom:25px;
+}
+
+.problem-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.problem-header h2{
+    color:#ffffff;
+    margin:0;
+}
+
+.difficulty{
+    padding:6px 14px;
+    border-radius:20px;
+    font-size:14px;
+    font-weight:bold;
+}
+
+.easy{
+    background:#22c55e;
+    color:white;
+}
+
+.problem-description{
+    color:#d1d5db;
+    line-height:1.8;
+    margin-bottom:25px;
+}
+
+.example,
+.constraints{
+    background:#1e1e1e;
+    border:1px solid #444;
+    padding:20px;
+    border-radius:10px;
+    margin-bottom:20px;
+}
+
+.example h3,
+.constraints h3{
+    color:#6d5dfc;
+    margin-bottom:10px;
+}
+
+.example p,
+.constraints li{
+    color:#e5e7eb;
+    line-height:1.7;
+}
+
+.constraints ul{
+    padding-left:20px;
+}
+
+.tags{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    margin-top:20px;
+}
+
+.tags span{
+    background:#6d5dfc;
+    color:white;
+    padding:8px 16px;
+    border-radius:20px;
+    font-size:13px;
+    font-weight:600;
+}

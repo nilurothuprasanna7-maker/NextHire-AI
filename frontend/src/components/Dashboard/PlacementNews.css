@@ -1,0 +1,17 @@
+.placement-news{
+background:rgba(255,255,255,.06);
+padding:25px;
+border-radius:20px;
+border:1px solid rgba(255,255,255,.08);
+color:white;
+}
+
+.placement-news ul{
+margin-top:20px;
+padding-left:20px;
+}
+
+.placement-news li{
+margin-bottom:15px;
+color:#cbd5e1;
+}

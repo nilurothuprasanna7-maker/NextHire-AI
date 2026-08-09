@@ -1,0 +1,27 @@
+.dashboard-page{
+    min-height:100vh;
+    background:#070b1d;
+    padding:30px;
+}
+
+.dashboard-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:25px;
+    margin-top:30px;
+}
+
+.left-section,
+.right-section{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+
+@media(max-width:992px){
+
+.dashboard-grid{
+grid-template-columns:1fr;
+}
+
+}

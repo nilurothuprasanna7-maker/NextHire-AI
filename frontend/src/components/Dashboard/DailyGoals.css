@@ -1,0 +1,19 @@
+.daily-goals{
+background:rgba(255,255,255,.06);
+padding:25px;
+border-radius:20px;
+border:1px solid rgba(255,255,255,.08);
+color:white;
+}
+
+.goal-item{
+display:flex;
+align-items:center;
+gap:12px;
+margin:15px 0;
+}
+
+.goal-item input{
+width:18px;
+height:18px;
+}

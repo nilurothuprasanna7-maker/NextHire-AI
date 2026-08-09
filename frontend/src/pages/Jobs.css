@@ -1,0 +1,19 @@
+.jobs-page{
+    padding:30px;
+}
+
+.jobs-page h1{
+    color:#6d5dfc;
+    margin-bottom:10px;
+}
+
+.jobs-subtitle{
+    color:#666;
+    margin-bottom:25px;
+}
+
+.jobs-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:25px;
+}
